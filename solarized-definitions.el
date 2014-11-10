@@ -552,7 +552,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (web-mode-html-attr-name-face ((t ( ,@fg-base0))))
              (web-mode-html-tag-bracket-face ((t ( ,@fg-base01))))
              (web-mode-html-tag-face ((t ( ,@fg-blue ,@fmt-bold))))
-	     )
+             ;;helm - based on https://github.com/lewang/emacs-color-theme-solarized/blob/master/solarized-definitions.el
+             (helm-source-header ((t (,@fg-base01 ,@bg-base02 :height 1.2 ,@fmt-none))))
+             (helm-ff-directory ((t (,@fg-cyan :background nil))))
+             (helm-candidate-number ((t (,@fmt-undr ,@fg-blue :background nil))))
+             (helm-ff-file ((t (:inherit default))))
+             (helm-ff-executable ((t (,@fg-green))))
+             (helm-selection ((t (,@bg-blue ,@fg-base02 ,@fmt-none))))
+             )
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
