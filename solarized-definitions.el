@@ -547,7 +547,12 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
 	     (term-color-blue ((t ( ,@fg-blue))))
 	     (term-color-magenta ((t ( ,@fg-magenta))))
 	     (term-color-cyan ((t ( ,@fg-cyan))))
-	     (term-color-white ((t ( ,@fg-base00)))))
+	     (term-color-white ((t ( ,@fg-base00))))
+	     ;;web-mode
+             (web-mode-html-attr-name-face ((t ( ,@fg-base0))))
+             (web-mode-html-tag-bracket-face ((t ( ,@fg-base01))))
+             (web-mode-html-tag-face ((t ( ,@fg-blue ,@fmt-bold))))
+	     )
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
